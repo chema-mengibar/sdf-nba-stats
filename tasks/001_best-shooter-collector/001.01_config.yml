@@ -1,0 +1,18 @@
+options:
+  increment-version: false
+params:
+  none: empty
+source:
+  top10-shooters:
+    dir: 001_best-shotter/
+    files:
+    - 00_collection_top10-shooters__season-2018-19.json
+    - 00_collection_top10-shooters__season-2017-18.json
+    - 00_collection_top10-shooters__season-2016-17.json
+    route: universe
+target:
+  dir: 001_best-shotter/
+  file: 01-collection_$CUSTOM$.json
+  route: universe
+version: 1.0
+description: Get the column key (FG3A, etc..) stats of a players in the whole seasson. Season idx (source-file) changed manually

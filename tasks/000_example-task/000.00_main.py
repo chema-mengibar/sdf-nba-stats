@@ -2,6 +2,7 @@
 import os
 import sys
 
+TASK_NAME = os.path.basename(__file__)
 DIR_TASK = os.path.basename(os.getcwd())
 DIR_LIB = os.path.abspath(os.path.join(os.path.dirname(__file__),"../"))
 DIR_TASK = os.path.dirname(os.path.abspath(__file__))
@@ -14,7 +15,8 @@ import datetime as dt
 import math
 import re
 
-CONFIG_FILE_NAME = '000.00_config'
+#com: get same prefix-file-name config file -> 100.00_config
+CONFIG_FILE_NAME = TASK_NAME.split('_')[0] + '_config'
 config = yaml.load( stream = file( DIR_TASK + '\\' + CONFIG_FILE_NAME + '.yml', 'r'))
 #yaml.dump( config, file( DIR_TASK + '\\config.yml', 'w') )
 

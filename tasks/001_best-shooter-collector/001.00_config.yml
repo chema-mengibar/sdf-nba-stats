@@ -1,0 +1,17 @@
+description: Get the list of top-ten shooter by seasson. Set the season parameter
+  manually.
+options:
+  increment-version: false
+params:
+  none: empty
+source:
+  source_name:
+    dir: your_source_folder/
+    files:
+    - your-file.json
+    route: master
+target:
+  dir: 001_best-shotter/
+  file: 00_collection_$CUSTOM$.json
+  route: universe
+version: 1.0
