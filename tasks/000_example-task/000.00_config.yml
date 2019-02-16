@@ -1,0 +1,15 @@
+options:
+  increment-version: false
+version: 1.0
+params:
+  none: empty
+source:
+  source_name:
+    dir: your_source_folder/
+    files: 
+    - your-file.json
+    route: master
+target:
+  dir: your_target_folder/
+  file: your-file_$TIME$.json
+  route: universe
